@@ -7,7 +7,11 @@ library(readxl)
 # international females only cd
 # international males only cd
 
+<<<<<<< HEAD
 # read in all data, filter for ADD, compute: Z, effective sample size, weighted Z and weights squared, log p
+=======
+# read in all data, filter for ADD, compute: Z, effective sample size, weighted Z and weights squared
+>>>>>>> bce594adefa0bd77c0036576072ffe6f8736e088
 cedars_cd_female <- read_xlsx("data/Ichip1to6_BBC_chrXandY_clean_FINAL2_metal.CD.assoc.logistic.xlsx", 
                               col_types = c("numeric", "text", "numeric", "text",
                                             "text", "numeric", "numeric", "numeric", 
@@ -87,8 +91,16 @@ combined_cedars_int_cd <- combined_cedars_int_cd %>%
 
 # write results to csv
 combined_cedars_int_cd %>%
+<<<<<<< HEAD
   write_csv("results/combined_cedars_int_cd.csv")
 
 combined_cedars_int_cd %>%
   select(SNP, p_comb_fisher, p_comb_stouffer) %>%
   write_csv("results/results.csv")
+=======
+  write_csv("combined_cedars_int_cd.csv")
+
+combined_cedars_int_cd %>%
+  select(SNP, p_comb_fisher, p_comb_stouffer) %>%
+  write_csv("results.csv")
+>>>>>>> bce594adefa0bd77c0036576072ffe6f8736e088
